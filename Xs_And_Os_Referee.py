@@ -7,7 +7,6 @@ def checkio(game_result):
             return game_result[num][0]
         elif game_result[0][num] is game_result[1][num] and game_result[1][num] is game_result[2][num] and game_result[0][num] != '.':
             return game_result[0][num]
-        print(num)
     if game_result[0][0] is game_result[1][1] and game_result[1][1] is game_result[2][2] and game_result[0][0] != '.':
         return game_result[0][0]
     elif game_result[0][2] is game_result[1][1] and game_result[1][1] is game_result[2][0] and game_result[0][2] != '.':
