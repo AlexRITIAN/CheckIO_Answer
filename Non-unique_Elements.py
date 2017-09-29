@@ -19,6 +19,8 @@ def checkio(data):
 #Create new list with non-unique elements
 #Loop over original list
 
+checkio_vol2 = lambda data:[item for item in data if data.count(item) > 1]
+
 
 if __name__ == "__main__":
     print("It is all good. Let's check it now")

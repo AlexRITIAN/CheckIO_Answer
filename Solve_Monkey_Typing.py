@@ -6,6 +6,9 @@ def count_words(text, words):
             #print(word)
     return sum
 
+def checkio_vol2(text,words):
+    return sum(word in text.lower() for word in words)
+
 
 if __name__ == '__main__':
     print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
