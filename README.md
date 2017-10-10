@@ -1,2 +1,5 @@
 # CheckIO_Answer
-There are some answer for CheckIO what I played.
+no String "vol" is my code.
+string "vol" is clear or smart by someone who publish his answer on CheckIO.
+
+I code this on Python3.
