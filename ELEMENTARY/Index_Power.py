@@ -8,6 +8,12 @@ def index_power(array, n):
     #     return int(pow(array[n],n))
     return int(pow(array[n],n)) if n < len(array) else -1
 
+def index_power_vol2(array,n):
+    try:
+        return array[n] ** n
+    except IndexError:
+        return -1
+
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
     # assert index_power([1, 2, 3, 4], 2) == 9, "Square"

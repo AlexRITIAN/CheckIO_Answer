@@ -5,6 +5,9 @@ def left_join(phrases):
     
     return ','.join(word.replace("right","left") for word in phrases)
 
+def left_join_vol2(phrases):
+    return (",".join(phrases)).replace("right", "left")
+
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
     # assert left_join(("left", "right", "left", "stop")) == "left,left,left,stop", "All to left"
