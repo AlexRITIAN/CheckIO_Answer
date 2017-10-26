@@ -14,6 +14,19 @@ def checkio(expression):
         return False
     return len(brackets) == 0
 
+def checkio_vol2(expression):
+    comparison = {"(":")","[":"]","{":"}"}
+    brackets = [""]
+    try:
+        for char in expression:
+            if char in comparison:
+                brackets.append(comparison[char])
+            elif char in comparison.values() and char !=brackets.pop():
+                return False
+    except:
+        return False
+    return brackets == [""]
+    
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     # assert checkio("((5+3)*2+1)") == True, "Simple"
