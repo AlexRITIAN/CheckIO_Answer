@@ -38,6 +38,18 @@ def checkio(data):
         data = data % numbers[i]
     return "".join(result)
 
+def checkio_vol2(data):
+    convert = {1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L', 
+               90: 'XC', 100: 'C', 400: 'CD', 500: 'D', 900: 'CM', 1000: 'M'}
+    roman_result = ''
+    while data > 0:
+        for arab_number in reversed(list(convert.keys())):
+            if data >= arab_number:
+                data -= arab_number
+                roman_result += convert[arab_number]
+                break
+    return roman_result
+
 if __name__ == '__main__':
     #These "asserts" using only for self-checking and not necessary for auto-testing
     # assert checkio(6) == 'VI', '6'
