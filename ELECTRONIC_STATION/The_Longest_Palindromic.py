@@ -49,11 +49,28 @@ def checkio(data):
         results_string = data[results_index[final_list_index][0]:results_index[final_list_index][1]]
         return results_string
 
+#this is so gooder than me.I forget who code this,but it's awesome.
+
+def substrings(string):
+    l = len(string)
+    for n in range(l, 0, -1):
+        for i in range(l - n + 1):
+            yield string[i:n+i]
+
+def longest_palindromic(string):
+    return next(sub for sub in substrings(string) if sub == sub[::-1])
+
 if __name__ == "__main__":
     print(checkio("abarada"))
     print(checkio("artrartrt"))
     print(checkio("aaaa"))
     print(checkio("abc"))
     print(checkio("aaaaa"))
+
+    print(longest_palindromic("abarada"))
+    print(longest_palindromic("artrartrt"))
+    print(longest_palindromic("aaaa"))
+    print(longest_palindromic("abc"))
+    print(longest_palindromic("aaaaa"))
 
     
